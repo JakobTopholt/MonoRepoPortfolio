@@ -1,0 +1,38 @@
+services:
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "8080:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - react-frontend
+      - vue-frontend
+      - vanilla-frontend
+      - node-backend
+      - python-backend
+      - java-backend
+
+  react-frontend:
+    build: ./frontends/react-app
+    expose: ["3000"]
+
+  vue-frontend:
+    build: ./frontends/vue-app
+    expose: ["3002"]
+
+  vanilla-frontend:
+    build: ./frontends/vanilla-app
+    expose: ["3003"]
+
+  node-backend:
+    build: ./backends/node-api
+    expose: ["4001"]
+
+  python-backend:
+    build: ./backends/python-api
+    expose: ["4002"]
+
+  java-backend:
+    build: ./backends/java-api
+    expose: ["4003"]
