@@ -10,31 +10,37 @@ import EmailIcon from '../../../shared/email-1-svgrepo-com.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [] = useState(0)
 
   return (
     <>
+      <section id = "navbar">
+        <div className ="navbar">
+          <img src={JTJBlack} className="homeButtonLogo" width="120" height="179" alt="MyWIPLogo" />
+        <ul>
+          <li>
+            <a>GitHub</a>
+            <a>Vacations</a>
+            <a>Fitness</a>
+            <a>Contact info</a>
+          </li>
+        </ul>
+        </div>
+      </section>
+
+
       <section id="center">
         <div className="hero">
           <img src={JTJBlack} className="base" width="120" height="179" alt="MyWIPLogo" />
         </div>
         <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
-          </p>
+          <h1>Portfolio Website</h1>
         </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
       </section>
+      <section id="spacer"></section>
 
-      <div className="ticks"></div>
-
+      <p>Jokes on you</p>
+      
       <section id="next-steps">
         
         <div id="social">
@@ -77,7 +83,7 @@ function App() {
                 +45 27540659
                 </a>
             </li>
-                        <li>
+            <li>
               <a href="mailto:jakob.topholt99@gmail.com">
                 <img
                   className="button-icon"

@@ -3,14 +3,11 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "workspaces":[
+  "workspaces": [
     "apps-frontend/*",
     "apps-backend/*"
   ],
   "scripts": {
-    "sync-data": "cp ../../shared/portfolio.json src/data/portfolio.json",
-    "predev": "npm run sync-data",
-    "prebuild": "npm run sync-data",
     "dev": "vite",
     "build": "vite build"
   },
